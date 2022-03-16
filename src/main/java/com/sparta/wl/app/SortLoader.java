@@ -1,8 +1,13 @@
-package com.sparta.wl;
+package com.sparta.wl.app;
+
+import com.sparta.wl.exception.SorterLoaderException;
+import com.sparta.wl.sorter.Sorter;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class SortLoader {
+
     public static void start() {
 
         DisplayManager displayManager = new DisplayManager();

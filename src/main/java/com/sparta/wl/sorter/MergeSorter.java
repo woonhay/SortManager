@@ -1,6 +1,13 @@
-package com.sparta.wl;
+package com.sparta.wl.sorter;
+
+import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class MergeSorter implements Sorter {
+
+    private static Logger mergeSortLogger = Logger.getLogger("mergeSortLogger");
+
     @Override
     public String getName(){
         return "Merge Sorter";
@@ -8,6 +15,7 @@ public class MergeSorter implements Sorter {
 
     @Override
     public int[] sortArray(int[] numbers) {
+        mergeSortLogger.log(Level.INFO, "Method start");
         if (numbers.length > 1) {
             int m = numbers.length / 2;
             int[] array1 = new int[numbers.length / 2];
@@ -26,9 +34,13 @@ public class MergeSorter implements Sorter {
             array2 = sortArray(array2);
 
             int[] sortedNumbers = sortTwoArray(array1, array2);
+            mergeSortLogger.log(Level.INFO, "Method end");
+            mergeSortLogger.log(Level.INFO, "Array: " + Arrays.toString(numbers));
             return sortedNumbers;
         }
         else {
+            mergeSortLogger.log(Level.INFO, "Method end");
+            mergeSortLogger.log(Level.INFO, "Array: " + Arrays.toString(numbers));
             return numbers;
         }
     }

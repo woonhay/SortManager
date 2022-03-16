@@ -1,5 +1,8 @@
 package com.sparta.wl;
 
+import com.sparta.wl.app.SortFactory;
+import com.sparta.wl.exception.SorterLoaderException;
+import com.sparta.wl.sorter.Sorter;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -26,49 +29,33 @@ public class PerformanceTester {
     }
 
     @Test
-    public void testBubbleSorter() {
-        System.out.println("*************" + Arrays.toString(unsortedArray));
-        Sorter sorter = new BubbleSort();
-        long start = System.nanoTime();
-        int[] sortedArray = sorter.sortArray(unsortedArray);
-        long end = System.nanoTime();
-        printResults(sorter.getName(), end - start, sortedArray);
+    public void testBubbleSorter() throws SorterLoaderException {
+        print(1);
     }
 
     @Test
-    public void testInsertionSorter() {
-        System.out.println("*************" + Arrays.toString(unsortedArray));
-        Sorter sorter = new InsertionSorter();
-        long start = System.nanoTime();
-        int[] sortedArray = sorter.sortArray(unsortedArray);
-        long end = System.nanoTime();
-        printResults(sorter.getName(), end - start, sortedArray);
+    public void testInsertionSorter() throws SorterLoaderException {
+        print(2);
     }
 
     @Test
-    public void testQuickSorter() {
-        System.out.println("*************" + Arrays.toString(unsortedArray));
-        Sorter sorter = new QuickSorter();
-        long start = System.nanoTime();
-        int[] sortedArray = sorter.sortArray(unsortedArray);
-        long end = System.nanoTime();
-        printResults(sorter.getName(), end - start, sortedArray);
+    public void testQuickSorter() throws SorterLoaderException {
+        print(3);
     }
 
     @Test
-    public void testMergeSorter() {
-        System.out.println("*************" + Arrays.toString(unsortedArray));
-        Sorter sorter = new MergeSorter();
-        long start = System.nanoTime();
-        int[] sortedArray = sorter.sortArray(unsortedArray);
-        long end = System.nanoTime();
-        printResults(sorter.getName(), end - start, sortedArray);
+    public void testMergeSorter() throws SorterLoaderException {
+        print(4);
     }
 
     @Test
-    public void testBinarySorter() {
+    public void testBinarySorter() throws SorterLoaderException {
+        print(5);
+    }
+
+    private void print(int i) throws SorterLoaderException {
         System.out.println("*************" + Arrays.toString(unsortedArray));
-        Sorter sorter = new BinarySorter();
+        Sorter sorter = SortFactory.getSorter(i);
         long start = System.nanoTime();
         int[] sortedArray = sorter.sortArray(unsortedArray);
         long end = System.nanoTime();

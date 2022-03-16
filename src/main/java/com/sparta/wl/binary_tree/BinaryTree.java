@@ -1,4 +1,6 @@
-package com.sparta.wl;
+package com.sparta.wl.binary_tree;
+
+import com.sparta.wl.exception.ChildNotFoundException;
 
 public interface BinaryTree {
     int getRootElement();

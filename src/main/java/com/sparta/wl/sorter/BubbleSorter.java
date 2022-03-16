@@ -1,6 +1,13 @@
-package com.sparta.wl;
+package com.sparta.wl.sorter;
 
-public class BubbleSort implements Sorter {
+import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class BubbleSorter implements Sorter {
+
+    private static Logger bubbleSortLogger = Logger.getLogger("bubbleSortLogger");
+
     @Override
     public String getName(){
         return "Bubble Sorter";
@@ -8,6 +15,7 @@ public class BubbleSort implements Sorter {
 
     @Override
     public int[] sortArray(int[] numbers) {
+        bubbleSortLogger.log(Level.INFO, "Method start");
         int n = numbers.length;
         int temp = 0;
         for (int i = 0; i < n; i ++) {
@@ -19,6 +27,8 @@ public class BubbleSort implements Sorter {
                 }
             }
         }
+        bubbleSortLogger.log(Level.INFO, "Method end");
+        bubbleSortLogger.log(Level.INFO, "Array: " + Arrays.toString(numbers));
         return numbers;
     }
 

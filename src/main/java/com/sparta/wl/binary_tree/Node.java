@@ -1,4 +1,4 @@
-package com.sparta.wl;
+package com.sparta.wl.binary_tree;
 
 public class Node {
 

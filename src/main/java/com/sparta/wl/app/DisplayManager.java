@@ -1,4 +1,6 @@
-package com.sparta.wl;
+package com.sparta.wl.app;
+
+import com.sparta.wl.sorter.Sorter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,7 +32,7 @@ public class DisplayManager {
     public static void displaySortChoices() {
         System.out.println("Enter the number of the sorter you wish to do:");
         for (int i = 0; i < getMenuItems().size(); i ++) {
-            System.out.println(i + 1 + ", " + getMenuItems().get(i));
+            System.out.println(i + 1 + ". " + getMenuItems().get(i));
         }
     }
 }

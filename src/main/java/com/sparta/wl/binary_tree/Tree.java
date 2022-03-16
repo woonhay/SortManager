@@ -1,8 +1,10 @@
-package com.sparta.wl;
+package com.sparta.wl.binary_tree;
+
+import com.sparta.wl.exception.ChildNotFoundException;
 
 import java.util.ArrayList;
 
-public class Tree implements BinaryTree{
+public class Tree implements BinaryTree {
     private final Node rootNode;
 
     public Tree(final int element) {

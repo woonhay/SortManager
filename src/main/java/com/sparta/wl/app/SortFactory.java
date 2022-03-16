@@ -1,4 +1,7 @@
-package com.sparta.wl;
+package com.sparta.wl.app;
+
+import com.sparta.wl.exception.SorterLoaderException;
+import com.sparta.wl.sorter.*;
 
 public class SortFactory {
 
@@ -7,7 +10,7 @@ public class SortFactory {
             case 1:
                 return new BinarySorter();
             case 2:
-                return new BubbleSort();
+                return new BubbleSorter();
             case 3:
                 return new InsertionSorter();
             case 4:
