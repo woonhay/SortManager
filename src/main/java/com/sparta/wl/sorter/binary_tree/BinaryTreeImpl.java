@@ -4,10 +4,10 @@ import com.sparta.wl.exception.ChildNotFoundException;
 
 import java.util.ArrayList;
 
-public class Tree implements BinaryTree {
+public class BinaryTreeImpl implements BinaryTree {
     private final Node rootNode;
 
-    public Tree(final int element) {
+    public BinaryTreeImpl(final int element) {
         rootNode = new Node(element);
     }
 

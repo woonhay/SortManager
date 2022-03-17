@@ -1,6 +1,6 @@
 package com.sparta.wl.sorter;
 
-import com.sparta.wl.sorter.binary_tree.Tree;
+import com.sparta.wl.sorter.binary_tree.BinaryTreeImpl;
 
 import java.util.Arrays;
 import java.util.logging.Level;
@@ -18,7 +18,7 @@ public class BinarySorter implements Sorter {
     @Override
     public int[] sortArray(int[] numbers) {
         binarySortLogger.log(Level.INFO, "Method start");
-        Tree tree = new Tree(numbers[0]);
+        BinaryTreeImpl tree = new BinaryTreeImpl(numbers[0]);
         tree.addElements(numbers);
         int[] sortedArray = tree.getSortedTreeAsc();
         binarySortLogger.log(Level.INFO, "Method end");
