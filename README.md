@@ -9,21 +9,22 @@ The program include 5 sorting method:
 
 The project include below programs:
 Java:
-  1. app
+  1. start
     - App: The start of the program.
-    - DisplayManager: Control the display of the program.
     - SortLoader: Body of the program.
     - SortFactory: Control which sorter will be used.
   
-  2. binary_tree
-    - BinaryTree: Interface of binary tree.
-    - Tree: Control the action of binary tree.
-    - Node: Node of binary tree
+  2. display
+    - DisplayManager: Control the display of the program.
   
   3. exception
     - xxxException * 2: Handle exception.
   4. sorter
     - xxxSorter * 5: Sort the array.
+    - binary_tree
+      - BinaryTree: Interface of binary tree.
+      - Tree: Control the action of binary tree.
+      - Node: Node of binary tree   
 
 Test:
   1. PerformanceTester: Test the performance of each sorter.
