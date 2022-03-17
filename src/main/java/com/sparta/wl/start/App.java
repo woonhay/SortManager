@@ -1,4 +1,4 @@
-package com.sparta.wl.app;
+package com.sparta.wl.start;
 
 public class App {
     public static void main(String[] args) {

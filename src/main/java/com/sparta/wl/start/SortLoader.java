@@ -1,10 +1,11 @@
-package com.sparta.wl.app;
+package com.sparta.wl.start;
 
+import com.sparta.wl.display.DisplayManager;
 import com.sparta.wl.exception.SorterLoaderException;
 import com.sparta.wl.sorter.Sorter;
+import com.sparta.wl.start.SortFactory;
 
 import java.util.Scanner;
-import java.util.logging.Logger;
 
 public class SortLoader {
 

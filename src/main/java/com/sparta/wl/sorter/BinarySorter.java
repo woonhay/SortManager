@@ -1,6 +1,6 @@
 package com.sparta.wl.sorter;
 
-import com.sparta.wl.binary_tree.Tree;
+import com.sparta.wl.sorter.binary_tree.Tree;
 
 import java.util.Arrays;
 import java.util.logging.Level;

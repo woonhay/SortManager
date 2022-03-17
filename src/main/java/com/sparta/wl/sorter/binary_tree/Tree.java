@@ -1,4 +1,4 @@
-package com.sparta.wl.binary_tree;
+package com.sparta.wl.sorter.binary_tree;
 
 import com.sparta.wl.exception.ChildNotFoundException;
 
@@ -96,34 +96,42 @@ public class Tree implements BinaryTree {
 
     @Override
     public int[] getSortedTreeAsc() {
-        int[] sortedArray = new int[getNumberOfElement()];
+        int[] ascArray = new int[getNumberOfElement()];
         ArrayList<Integer> list = new ArrayList<Integer>();
-        toList(rootNode, list);
+        sortTreeAsc(rootNode, list);
 
-        for (int i = 0; i < sortedArray.length; i ++) {
-            sortedArray[i] = list.get(i);
+        for (int i = 0; i < ascArray.length; i ++) {
+            ascArray[i] = list.get(i);
         }
-        return sortedArray;
-    }
-
-    public void toList(Node node, ArrayList list){
-        if(node != null){
-            toList(node.getLeftChild(), list);
-            list.add(node.getValue());
-            toList(node.getRightChild(), list);
-        }
+        return ascArray;
     }
 
     @Override
     public int[] getSortedTreeDesc() {
-        int[] sortedArray = new int[getNumberOfElement()];
+        int[] descArray = new int[getNumberOfElement()];
         ArrayList<Integer> list = new ArrayList<Integer>();
-        toList(rootNode, list);
+        sortTreeDesc(rootNode, list);
 
-        for (int i = 0; i < sortedArray.length; i ++) {
-            sortedArray[i] = list.get(sortedArray.length - 1 - i);
+        for (int i = 0; i < descArray.length; i ++) {
+            descArray[i] = list.get(descArray.length - 1 - i);
         }
-        return sortedArray;
+        return descArray;
+    }
+
+    public void sortTreeAsc(Node node, ArrayList list) {
+        if (node != null) {
+            sortTreeAsc(node.getLeftChild(), list);
+            list.add(node.getValue());
+            sortTreeAsc(node.getRightChild(), list);
+        }
+    }
+
+    public void sortTreeDesc(Node node, ArrayList list) {
+        if (node != null) {
+            sortTreeDesc(node.getRightChild(), list);
+            list.add(node.getValue());
+            sortTreeDesc(node.getLeftChild(), list);
+        }
     }
 
     private void addNoteToTree(Node node, int element) {

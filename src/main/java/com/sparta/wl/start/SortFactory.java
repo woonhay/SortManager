@@ -1,4 +1,4 @@
-package com.sparta.wl.app;
+package com.sparta.wl.start;
 
 import com.sparta.wl.exception.SorterLoaderException;
 import com.sparta.wl.sorter.*;

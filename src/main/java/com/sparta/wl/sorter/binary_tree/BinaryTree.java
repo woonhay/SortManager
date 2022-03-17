@@ -1,4 +1,4 @@
-package com.sparta.wl.binary_tree;
+package com.sparta.wl.sorter.binary_tree;
 
 import com.sparta.wl.exception.ChildNotFoundException;
 
