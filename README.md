@@ -6,6 +6,7 @@ The program include 5 sorting method:
 3. InsertionSorter
 4. MergeSorter
 5. QuickSorter
+6. SelectionSorter
 
 The project include below programs:
 Java:
@@ -21,7 +22,7 @@ Java:
     - xxxException * 2: Handle exception.
 
   4. sorter
-    - xxxSorter * 5: Sort the array.
+    - xxxSorter * 6: Sort the array.
     - binary_tree
       - BinaryTree: Interface of binary tree.
       - Tree: Control the action of binary tree.
