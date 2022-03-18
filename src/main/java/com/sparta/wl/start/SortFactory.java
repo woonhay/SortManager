@@ -2,6 +2,7 @@ package com.sparta.wl.start;
 
 import com.sparta.wl.exception.SorterLoaderException;
 import com.sparta.wl.sorter.*;
+import com.sparta.wl.sorter.SelectionSorter;
 
 public class SortFactory {
 
@@ -17,6 +18,8 @@ public class SortFactory {
                 return new MergeSorter();
             case 5:
                 return new QuickSorter();
+            case 6:
+                return new SelectionSorter();
             default:
                 throw new SorterLoaderException("Invalid Sorter choice: " + choice);
         }

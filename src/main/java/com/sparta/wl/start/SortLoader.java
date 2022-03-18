@@ -9,7 +9,7 @@ public class SortLoader {
 
     public static void start() {
 
-        com.sparta.wl.app.DisplayManager displayManager = new com.sparta.wl.app.DisplayManager();
+        com.sparta.wl.display.DisplayManager displayManager = new com.sparta.wl.display.DisplayManager();
 
         Scanner scanner = new Scanner(System.in);
 
@@ -25,11 +25,11 @@ public class SortLoader {
 
         sorterNum = scanner.nextInt();
 
-        while (sorterNum < 1 || sorterNum > 5) {
-            System.out.println("Input must between 1 and 5");
+        while (sorterNum < 1 || sorterNum > 6) {
+            System.out.println("Input must between 1 and 6");
             displayManager.displaySortChoices();
             while (!scanner.hasNextInt()) {
-                System.out.println("Input must between 1 and 5");
+                System.out.println("Input must between 1 and 6");
                 displayManager.displaySortChoices();
                 scanner.next();
             }

@@ -1,4 +1,4 @@
-package com.sparta.wl.app;
+package com.sparta.wl.display;
 
 import com.sparta.wl.sorter.Sorter;
 
@@ -12,12 +12,13 @@ public class DisplayManager {
                 "BubbleSorter",
                 "InsertionSorter",
                 "MergeSorter",
-                "QuickSorter"
+                "QuickSorter",
+                "SelectionSorter"
         ));
     }
 
     public static void printBeforeSort(Sorter sorter, int[] arrayToSort) {
-        System.out.println("Sorting using the " + sorter);
+        System.out.println("Sorting using the " + sorter.getName());
         System.out.println("Before sorting:\n" + Arrays.toString(arrayToSort));
     }
 

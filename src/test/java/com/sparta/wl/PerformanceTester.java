@@ -29,17 +29,17 @@ public class PerformanceTester {
     }
 
     @Test
-    public void testBubbleSorter() throws SorterLoaderException {
+    public void testBinarySorter() throws SorterLoaderException {
         print(1);
     }
 
     @Test
-    public void testInsertionSorter() throws SorterLoaderException {
+    public void testBubbleSorter() throws SorterLoaderException {
         print(2);
     }
 
     @Test
-    public void testQuickSorter() throws SorterLoaderException {
+    public void testInsertionSorter() throws SorterLoaderException {
         print(3);
     }
 
@@ -49,8 +49,13 @@ public class PerformanceTester {
     }
 
     @Test
-    public void testBinarySorter() throws SorterLoaderException {
+    public void testQuickSorter() throws SorterLoaderException {
         print(5);
+    }
+
+    @Test
+    public void testSelectionSorter() throws SorterLoaderException {
+        print(6);
     }
 
     private void print(int i) throws SorterLoaderException {
